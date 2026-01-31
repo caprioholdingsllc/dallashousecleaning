@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Home Dallas | Professional Cleaning for Homeowners & Property Managers</title>
+    <meta name="description" content="Whether you're a homeowner, property manager, or business owner, we provide professional cleaning services tailored to your needs in Dallas.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+            color: white;
+            padding: 1rem 2rem;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .phone {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .hero {
+            background: #6d28d9;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .customer-types {
+            background: #faf5ff;
+            padding: 3rem 2rem;
+            margin: -3rem -2rem 3rem -2rem;
+        }
+        .customer-types h2 {
+            text-align: center;
+            color: #7c3aed;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .type-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid #7c3aed;
+        }
+        .type-card h3 {
+            color: #7c3aed;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .type-card p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        .type-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .type-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #666;
+        }
+        .type-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #7c3aed;
+            font-weight: bold;
+        }
+        .services-section {
+            margin: 3rem 0;
+        }
+        .services-section h2 {
+            color: #7c3aed;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid #7c3aed;
+        }
+        .service-card h3 {
+            color: #7c3aed;
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .client-note {
+            background: #fef3c7;
+            border-left: 4px solid #fbbf24;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 3rem 0;
+        }
+        .client-note h3 {
+            color: #92400e;
+            margin-bottom: 0.75rem;
+        }
+        .client-note p {
+            color: #78350f;
+            line-height: 1.7;
+        }
+        .form-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+        .form-section h2 {
+            color: #7c3aed;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .form-section .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #7c3aed;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            opacity: 0.95;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Clean Home Dallas</div>
+            <div class="phone">📞 (972) 284-0913</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Whether You're a Homeowner or Property Manager...</h1>
+        <p>We provide professional cleaning services tailored to your specific needs across Dallas.</p>
+    </section>
+
+    <div class="container">
+        <section class="customer-types">
+            <h2>Who We Serve</h2>
+            <div class="types-grid">
+                <div class="type-card">
+                    <h3>Homeowners</h3>
+                    <p>Keep your home clean and comfortable with regular or one-time cleaning services.</p>
+                    <ul>
+                        <li>Weekly or bi-weekly service</li>
+                        <li>Deep cleaning options</li>
+                        <li>Move-in/move-out cleaning</li>
+                        <li>Flexible scheduling</li>
+                        <li>Same team each visit</li>
+                    </ul>
+                </div>
+
+                <div class="type-card">
+                    <h3>Property Managers</h3>
+                    <p>Reliable cleaning partner for your rental properties and apartment communities.</p>
+                    <ul>
+                        <li>Turnover cleaning between tenants</li>
+                        <li>Vacant unit maintenance</li>
+                        <li>Common area cleaning</li>
+                        <li>Multiple property discounts</li>
+                        <li>Priority scheduling</li>
+                    </ul>
+                </div>
+
+                <div class="type-card">
+                    <h3>Real Estate Professionals</h3>
+                    <p>Make listings shine with professional pre-showing cleaning.</p>
+                    <ul>
+                        <li>Pre-listing deep cleans</li>
+                        <li>Post-showing touch-ups</li>
+                        <li>Quick response times</li>
+                        <li>Staging preparation</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                </div>
+
+                <div class="type-card">
+                    <h3>Small Business Owners</h3>
+                    <p>Professional cleaning for offices, retail spaces, and commercial properties.</p>
+                    <ul>
+                        <li>After-hours service</li>
+                        <li>Restroom sanitization</li>
+                        <li>Break room cleaning</li>
+                        <li>Reception area maintenance</li>
+                        <li>Regular or one-time service</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <h2>Services by Type</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Regular Cleaning</h3>
+                    <p>Weekly or bi-weekly maintenance cleaning for occupied homes and properties.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Deep Cleaning</h3>
+                    <p>Thorough top-to-bottom cleaning including baseboards, inside appliances, and detailed work.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Move-Out/Move-In</h3>
+                    <p>Complete cleaning for vacant units before new tenants or after moving.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Post-Construction</h3>
+                    <p>Remove dust and debris after renovations or construction work.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Office Cleaning</h3>
+                    <p>Professional cleaning for workspaces, restrooms, and common areas.</p>
+                </div>
+                <div class="service-card">
+                    <h3>One-Time Cleaning</h3>
+                    <p>Single deep clean for special occasions or seasonal needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="client-note">
+            <h3>🏡 Working with Different Clients in Dallas</h3>
+            <p>We've cleaned thousands of homes, apartments, and offices across Dallas. Homeowners appreciate our consistency and attention to detail. Property managers value our quick turnaround for multiple units. Real estate agents rely on us to make properties show-ready on short notice. Each type of client has different priorities—we adjust our service accordingly.</p>
+        </div>
+
+        <section class="form-section">
+            <h2>Request Cleaning Service</h2>
+            <p class="subtitle">Tell us about your cleaning needs</p>
+            
+            <form id="leadForm" action="https://hook.us2.make.com/gzcbxb8x2e5xph37kjhm48ur4khvh7ir" method="POST">
+                <input type="hidden" name="site_id" value="DFW-CLEAN-001">
+                <input type="hidden" name="market" value="Dallas">
+                <input type="hidden" name="industry" value="House Cleaning">
+                <input type="hidden" name="lead_type" value="Service Request">
+                <input type="hidden" name="source_url" value="cleanhousedallas.com">
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="client_type">I Am A: *</label>
+                    <select id="client_type" name="client_type" required>
+                        <option value="">Select...</option>
+                        <option value="Homeowner">Homeowner</option>
+                        <option value="Property Manager">Property Manager</option>
+                        <option value="Real Estate Professional">Real Estate Professional</option>
+                        <option value="Business Owner">Business Owner</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="service_type">Service Needed *</label>
+                    <select id="service_type" name="service_type" required>
+                        <option value="">Select...</option>
+                        <option value="Regular Cleaning">Regular Cleaning</option>
+                        <option value="Deep Cleaning">Deep Cleaning</option>
+                        <option value="Move-In/Move-Out">Move-In/Move-Out</option>
+                        <option value="Office Cleaning">Office Cleaning</option>
+                        <option value="Post-Construction">Post-Construction</option>
+                        <option value="One-Time Cleaning">One-Time Cleaning</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="property_size">Property Size *</label>
+                    <select id="property_size" name="property_size" required>
+                        <option value="">Select...</option>
+                        <option value="Studio/1BR">Studio/1BR</option>
+                        <option value="2BR">2BR</option>
+                        <option value="3BR">3BR</option>
+                        <option value="4BR+">4BR+</option>
+                        <option value="Commercial">Commercial</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Additional Details *</label>
+                    <textarea id="details" name="details" required placeholder="Tell us about your cleaning needs..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Request Quote</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Clean Home Dallas. Professional Cleaning Services.</p>
+    </footer>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                window.location.href = 'thanks.html';
+            }).catch(() => {
+                window.location.href = 'thanks.html';
+            });
+        });
+    </script>
+</body>
+</html>
